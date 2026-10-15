@@ -1,0 +1,2 @@
+# riski.indekx
+selalu hadir
