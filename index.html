@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart School - Data Siswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>🎓 Smart School</h2>
+        <p class="menu-title">MENU UTAMA</p>
+        <a href="#dashboard" class="menu active">🏠 Dashboard</a>
+        <a href="#data-siswa" class="menu">👨‍🎓 Data Siswa</a>
+        <a href="#tentang" class="menu">ℹ️ Tentang Aplikasi</a>
+    </div>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Selamat datang di Smart School!</p>
+            </div>
+            <button id="darkModeBtn" type="button">🌙 Mode Gelap</button>
+        </header>
+
+        <section id="dashboard">
+            <h2>Ringkasan Data</h2>
+            <div class="cards">
+                <div class="card">
+                    <p>Total Siswa</p>
+                    <h2 id="totalSiswa">0</h2>
+                </div>
+                <div class="card">
+                    <p>Kelas XI</p>
+                    <h2 id="totalKelas">0</h2>
+                </div>
+                <div class="card">
+                    <p>Jumlah Jurusan</p>
+                    <h2 id="totalJurusan">0</h2>
+                </div>
+            </div>
+        </section>
+
+        <section id="data-siswa" class="panel">
+            <h2>👨‍🎓 Data Siswa</h2>
+            <p>Tambahkan dan kelola data siswa di bawah ini.</p>
+
+            <form id="formSiswa">
+                <div class="form-grid">
+                    <label>
+                        Nama Siswa
+                        <input type="text" id="nama" placeholder="Masukkan nama siswa" required>
+                    </label>
+                    <label>
+                        NIS
+                        <input type="text" id="nis" placeholder="Contoh: 001" required>
+                    </label>
+                    <label>
+                        Kelas
+                        <select id="kelas" required>
+                            <option value="">Pilih kelas</option>
+                            <option value="X">X</option>
+                            <option value="XI">XI</option>
+                            <option value="XII">XII</option>
+                        </select>
+                    </label>
+                    <label>
+                        Jurusan
+                        <select id="jurusan" required>
+                            <option value="">Pilih jurusan</option>
+                            <option value="TKJ">TKJ</option>
+                            <option value="RPL">RPL</option>
+                            <option value="AKL">AKL</option>
+                            <option value="MPLB">MPLB</option>
+                        </select>
+                    </label>
+                </div>
+                <button type="submit" class="btn-primary" id="submitBtn">+ Tambah Siswa</button>
+                <button type="button" id="batalEdit" class="btn-secondary" hidden>Batal Edit</button>
+            </form>
+
+            <div class="search-box">
+                <input type="search" id="pencarian" placeholder="🔎 Cari nama atau NIS siswa...">
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Nama</th>
+                            <th>NIS</th>
+                            <th>Kelas</th>
+                            <th>Jurusan</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelSiswa"></tbody>
+                </table>
+            </div>
+            <p id="pesanKosong" class="empty-message">Belum ada data siswa.</p>
+        </section>
+
+        <section id="tentang" class="panel">
+            <h2>ℹ️ Tentang Aplikasi</h2>
+            <p>Smart School adalah aplikasi latihan untuk belajar mengelola data siswa menggunakan HTML, CSS, dan JavaScript.</p>
+        </section>
+
+        <footer>© 2026 Smart School | Aplikasi Data Siswa</footer>
+    </main>
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</body>
+</html>         
